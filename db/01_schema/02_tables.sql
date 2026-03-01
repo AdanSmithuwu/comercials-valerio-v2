@@ -1,10 +1,3 @@
-CREATE DATABASE cv_ventas_v2;
-
-CREATE SCHEMA cv;
-SELECT schema_name FROM information_schema.schemata;
-ALTER DATABASE cv_ventas_v2
-SET search_path TO cv, public;
-
 CREATE TABLE cv.rol (
     id_rol INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nombre VARCHAR(20) NOT NULL UNIQUE,
