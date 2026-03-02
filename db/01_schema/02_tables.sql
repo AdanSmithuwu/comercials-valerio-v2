@@ -327,3 +327,18 @@ CREATE TABLE cv.bitacora_login (
         REFERENCES cv.empleado(id_persona)
         ON DELETE CASCADE
 );
+
+CREATE TABLE cv.comprobante (
+    id_comprobante INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_transaccion INT NOT NULL,
+    fecha_emision TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    bytes_pdf BYTEA NOT NULL,
+
+    CONSTRAINT fk_comprobante_trans
+        FOREIGN KEY (id_transaccion)
+        REFERENCES cv.transaccion(id_transaccion)
+        ON DELETE CASCADE,
+
+    CONSTRAINT uq_comprobante_trans UNIQUE (id_transaccion)
+);
+
