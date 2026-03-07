@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Comercial'sValerio
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cv_comercial_valerio
+    username: postgres
+    password: 131995
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+    flyway:
+      enabled: false
