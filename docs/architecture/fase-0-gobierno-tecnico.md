@@ -126,3 +126,72 @@ La fase se considera cerrada cuando el equipo aprueba formalmente:
 - la arquitectura objetivo,
 - el Definition of Done por módulo,
 - y el plan de ejecución de Fase 1.
+
+comercialsvalerio/
+├─ pom.xml
+├─ README.md
+├─ .gitignore
+├─ docs/
+│  ├─ architecture/
+│  │  ├─ adr/
+│  │  ├─ guia-control-paralelo-proyecto-nuevo.md
+│  │  ├─ fase-beta-base-proyecto-comercialsvalerio.md
+│  │  └─ tablero-control-paralelo.md
+│  ├─ api/
+│  ├─ domain/
+│  ├─ persistence/
+│  └─ runbooks/
+│
+├─ apps/
+│  ├─ api-rest/                          # Spring Boot app (main)
+│  │  └─ src/main/java/com/calderon/comercialsvalerio/
+│  │     ├─ api/                         # controllers REST, handlers
+│  │     ├─ config/                      # security, openapi, jackson
+│  │     └─ bootstrap/                   # config inicial, seeds
+│  └─ backoffice-ui/                     # frontend (cuando toque)
+│
+├─ modules/
+│  ├─ shared/
+│  │  ├─ shared-domain/                  # value objects comunes, errores base
+│  │  ├─ shared-application/             # DTO base, contratos cross-cutting
+│  │  └─ shared-infrastructure/          # utilidades técnicas transversales
+│
+│  ├─ iam/                               # autenticación/autorización
+│  │  ├─ iam-domain/
+│  │  ├─ iam-application/
+│  │  └─ iam-infrastructure/
+│
+│  ├─ sales/                             # ventas/transacciones/comprobantes
+│  │  ├─ sales-domain/
+│  │  ├─ sales-application/
+│  │  └─ sales-infrastructure/
+│
+│  ├─ orders/                            # pedidos/entregas/orden compra
+│  │  ├─ orders-domain/
+│  │  ├─ orders-application/
+│  │  └─ orders-infrastructure/
+│
+│  ├─ inventory/                         # stock/alertas/movimientos
+│  │  ├─ inventory-domain/
+│  │  ├─ inventory-application/
+│  │  └─ inventory-infrastructure/
+│
+│  ├─ catalog/                           # productos/categorías/presentaciones
+│  │  ├─ catalog-domain/
+│  │  ├─ catalog-application/
+│  │  └─ catalog-infrastructure/
+│
+│  ├─ customers/                         # clientes/historial cliente
+│  │  ├─ customers-domain/
+│  │  ├─ customers-application/
+│  │  └─ customers-infrastructure/
+│
+│  └─ reports/                           # reportes diarios/mensuales/rotación
+│     ├─ reports-domain/
+│     ├─ reports-application/
+│     └─ reports-infrastructure/
+│
+└─ db/
+├─ migration/                         # Flyway
+├─ seed/
+└─ scripts/
