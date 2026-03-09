@@ -1,5 +1,0 @@
-spring:
-  application:
-    name: Comercial'sValerio
-  profiles:
-    active: dev
