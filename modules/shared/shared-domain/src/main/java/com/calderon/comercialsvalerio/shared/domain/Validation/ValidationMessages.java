@@ -1,6 +1,6 @@
 package com.calderon.comercialsvalerio.shared.domain.Validation;
 
-import static com.calderon.comercialsvalerio.shared.domain.constraints.DbConstraints;
+import com.calderon.comercialsvalerio.shared.domain.constraints.DbConstraints;
 
 /** Constantes comunes de mensajes de validación reutilizadas en el dominio. */
 public final class ValidationMessages {

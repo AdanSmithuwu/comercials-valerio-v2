@@ -1,7 +1,7 @@
 package com.calderon.comercialsvalerio.shared.domain.Validation;
 
-import static com.calderon.comercialsvalerio.shared.domain.exception.BusinessRuleViolationException;
-import static com.calderon.comercialsvalerio.shared.domain.constraints.DbConstraints;
+import com.calderon.comercialsvalerio.shared.domain.exception.BusinessRuleViolationException;
+import com.calderon.comercialsvalerio.shared.domain.constraints.DbConstraints;
 import java.math.BigDecimal;
 import java.util.regex.Pattern;
 
