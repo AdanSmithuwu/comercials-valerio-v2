@@ -127,6 +127,133 @@ La fase se considera cerrada cuando el equipo aprueba formalmente:
 - el Definition of Done por módulo,
 - y el plan de ejecución de Fase 1.
 
+## ANTES
+nose/
+├─ pom.xml
+├─ common/
+├─ domain/
+├─ infrastructure/
+├─ application/
+├─ presentation-ui/
+├─ db/
+└─ docs/
+common/
+├─ pom.xml
+└─ src/main/java/com/comercialvalerio/common/
+├─ DbConstraints.java
+├─ DependencyUtils.java
+├─ MoneyUtils.java
+├─ PhoneUtils.java
+├─ config/ConfigUtils.java
+├─ exception/ConfigException.java
+├─ json/ (serializers, deserializers, adapters JSON-B)
+├─ time/DateMapper.java, TimeZoneProvider.java
+└─ transaction/Transactional.java
+domain/
+├─ pom.xml
+└─ src/main/java/com/comercialvalerio/domain/
+├─ config/
+├─ exception/
+├─ model/ (AlertaStock, Producto, Pedido, Venta, Transaccion, etc.)
+├─ notification/
+├─ repository/
+│  └─ report/
+├─ security/
+│  └─ service/
+├─ service/
+├─ util/
+└─ view/
+└─ report/
+infrastructure/
+├─ pom.xml
+└─ src/main/java/com/comercialvalerio/infrastructure/
+├─ config/
+├─ notification/
+│  ├─ drive/
+│  └─ whatsapp/
+├─ pdf/
+├─ persistence/
+│  ├─ dto/
+│  ├─ entity/
+│  │  └─ report/
+│  ├─ impl/
+│  │  └─ report/
+│  ├─ mapper/
+│  │  └─ report/
+│  └─ tvp/
+├─ security/
+├─ service/
+│  └─ report/
+└─ transaction/
+application/
+└─ src/
+└─ main/
+├─ java/com.comercialvalerio.application/
+│  ├─ cache/
+│  ├─ config/
+│  ├─ dto/
+│  ├─ exception/
+│  ├─ mapper/
+│  ├─ notification/
+│  ├─ rest/
+│  ├─ scheduler/
+│  ├─ security/
+│  └─ service/
+├─ resources/META-INF.services/
+└─ webapp/WEB-INF/
+├─ beans.xml
+├─ jboss-deployment-structure.xml
+├─ jboss-web.xml
+└─ web.xml
+presentation-ui/
+├─ pom.xml
+└─ src/main/java/com/comercialvalerio/presentation/
+├─ client/
+├─ config/
+├─ controller/
+│  ├─ alertas/
+│  ├─ auth/
+│  ├─ bitacora/
+│  ├─ categorias/
+│  ├─ clientes/
+│  ├─ dashboard/
+│  ├─ empleados/
+│  ├─ historial/
+│  ├─ mantenimiento/
+│  ├─ parametros/
+│  ├─ pedidos/
+│  ├─ productos/
+│  ├─ reportes/
+│  └─ ventas/
+├─ core/
+├─ launcher/
+├─ notification/
+├─ ui/ (formularios/dialogs/componentes)
+└─ util/
+db/
+├─ DDL.sql
+├─ DDL_postgresql.sql
+├─ TVF_y_SF.sql
+├─ SP.sql
+├─ Triggers.sql
+├─ VW.sql
+├─ Security.sql
+├─ CatalogInserts.sql
+├─ ExamplePeople.sql
+├─ ProductBatches.sql
+├─ InitialInventory.sql
+├─ InstallAll.sql
+├─ MaintenancePlan.sql
+└─ install_db.ps1
+docs/
+├─ architecture/
+├─ database/
+├─ domain/
+├─ persistence/
+├─ ui/
+└─ use-cases/
+
+## DESPUES
 comercialsvalerio/
 ├─ pom.xml
 ├─ README.md
